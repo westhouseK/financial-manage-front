@@ -13,21 +13,11 @@ export const actions = {
         // axiosでGASからデータを取得
         console.log('stateに入れる')
         const data = [{
-            date: '2020-05-03',
-            name: 'Tom',
-            address: 'No. 189, Grove St, Los Angeles'
-            }, {
-            date: '2020-05-02',
-            name: 'Tom',
-            address: 'No. 189, Grove St, Los Angeles'
-            }, {
-            date: '2020-05-04',
-            name: 'Tom',
-            address: 'No. 189, Grove St, Los Angeles'
-            }, {
-            date: '2020-05-01',
-            name: 'Tom',
-            address: 'No. 189, Grove St, Los Angeles'
+            id: 'aaaaaa',
+            date: '20200701',
+            name: '私',
+            category1: '食費',
+            outgo: 1000
         }]
 
         // stateにcommitする

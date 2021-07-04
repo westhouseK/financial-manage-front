@@ -5,17 +5,23 @@
       style="width: 100%">
       <el-table-column 
         prop="date"
-        label="Date"
+        label="購入日"
         width="180">
       </el-table-column>
       <el-table-column
         prop="name"
-        label="Name"
+        label="名前"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="address"
-        label="Address">
+        prop="category1"
+        label="カテゴリ1"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="outgo"
+        label="出費"
+      >
       </el-table-column>
     </el-table>
   </div>
