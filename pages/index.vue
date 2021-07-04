@@ -1,24 +1,43 @@
 <template>
-  <div>
-    <div class="block">
-      <h4>Nuxt.js + Element？</h4>
-      <el-rate v-model="value" :colors="['#2F3D4D', '#64B486', '#4B7C6E']"></el-rate>
-    </div>
-  </div>
+<div>
+  <el-table
+    :data="tableData"
+    style="width: 100%">
+    <el-table-column 
+      prop="date"
+      label="Date"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="Name"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="address"
+      label="Address">
+    </el-table-column>
+  </el-table>
+</div>
 </template>
 
-<style scoped>
-  .block {
-    padding: 0 20px;
-  }
-</style>
-
 <script>
+import { mapMutaions } from 'vuex';
+
 export default {
-  data () {
-    return {
-      value: null
+  computed: {
+    todos() {
+      return this.$store.state.todos.tableData;
     }
+  },
+  data() {
+    return this.$store.state.todos.tableData;
+  },
+  mounted() {
+    // axiosの処理を書く
   }
+
 }
+  
+    
 </script>

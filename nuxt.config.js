@@ -9,7 +9,7 @@ export default {
   head: {
     title: 'financial-manage',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
