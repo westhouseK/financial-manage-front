@@ -1,12 +1,23 @@
 <template>
-  <div>
-    <header>
-        <h1>家計簿アプリ</h1>
-    </header>
-    <nuxt-link to="/">top</nuxt-link>
-    <nuxt-link to="/test">登録</nuxt-link> 
-    <nuxt-link to="/test">スプレッドシートへ</nuxt-link>
-    <span>キャラのアイコン</span>
-    <Nuxt />
-  </div>
+  <el-container>
+    <el-header class="header">
+      <div class="title">家計簿アプリ</div>
+      <div>
+          <nuxt-link to="/test"><el-button size="midium" type="primary" icon="el-icon-document" circle style="margin-right: 10px"></el-button></nuxt-link>
+          <el-button size="midium" type="primary" icon="el-icon-user" circle></el-button>
+      </div>
+    </el-header>
+    <el-main><Nuxt /></el-main>
+  </el-container>
 </template>
+
+<style scoped>
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title {
+    font-size: 2em;
+  }
+
+</style>
