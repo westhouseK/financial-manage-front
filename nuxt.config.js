@@ -45,7 +45,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    '@nuxtjs/auth'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -53,11 +53,21 @@ export default {
     proxy: true
   },
 
-  // なんかうまく動かない
-  proxy: {
-    '/api/': {
-      target: 'http://localhost:8000/api',
-      pathRewrite: {'^/api/': ''},
+  // authに関する処理
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
+          logout: false,
+          user: { url: '/api/auth/user', method: 'get', propertyName: 'user' }
+        },
+        // tokenRequired: true,
+        // tokenType: 'bearer'
+      }
+    },
+    redirect: {
+      home: "/"
     }
   },
 
